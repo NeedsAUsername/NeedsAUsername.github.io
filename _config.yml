@@ -1,10 +1,10 @@
 # Site settings
-title: 
+title: Flatiron Blog Journal
 header-img: img/home-bg.png
 email: kevinchi118@gmail.com
 copyright_name: NeedsAUsername
 description: > # this means to ignore newlines until "baseurl:"
-  
+  a coding journey
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  NeedsAUsername
