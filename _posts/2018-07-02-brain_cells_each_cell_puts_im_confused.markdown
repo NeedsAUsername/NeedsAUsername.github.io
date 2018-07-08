@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "brain_cells.each {|cell| puts "I'm confused!"}"
-date:       2018-07-02 17:11:15 +0000
+date:       2018-07-02 13:11:16 -0400
 permalink:  brain_cells_each_cell_puts_im_confused
 ---
 
