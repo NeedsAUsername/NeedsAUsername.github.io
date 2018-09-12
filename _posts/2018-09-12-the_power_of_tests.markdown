@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "The power of tests"
-date:       2018-09-12 18:05:12 +0000
+date:       2018-09-12 14:05:12 -0400
 permalink:  the_power_of_tests
 ---
 
