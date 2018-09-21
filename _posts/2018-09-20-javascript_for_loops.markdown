@@ -11,7 +11,7 @@ Javascript for loops can incorporate different types of logic, depending on what
 const array = [1, 2, 3]
 
 The standard for loop: very customizable.
-for (let i = 0; i < array.length; i++) {
+for (const i = 0; i < array.length; i++) {
    console.log(array[i]);
 }
 //1
@@ -19,7 +19,7 @@ for (let i = 0; i < array.length; i++) {
 //3
 
 The for..in loop: a more elegant way to loop objects.
-for (var i in array) {
+for (const i in array) {
   console.log(array[i]);
 }
 //1
@@ -27,7 +27,7 @@ for (var i in array) {
 //3
 
 The for..of loop: easy access to elements, similar to Python's for loop
-for (var element of array) {
+for (const element of array) {
   console.log(element);
 }
 //1
