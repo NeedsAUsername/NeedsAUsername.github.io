@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Useful Websites"
-date:       2018-10-03 04:13:10 +0000
+date:       2018-10-03 00:13:11 -0400
 permalink:  useful_websites
 ---
 
@@ -18,7 +18,7 @@ Here is a list of websites that I've found to be helpful resources.
 
 5. https://caniuse.com/ is a convenient way to check broswer compatibilities
 
-6.https://codesandbox.io/ is an easy way to test code without having to set up your own environment. 
+6. https://codesandbox.io/ is an easy way to test code without having to set up your own environment. 
 
-7,https://www.git-tower.com/blog/git-cheat-sheet simple git cheat sheet
+7. https://www.git-tower.com/blog/git-cheat-sheet simple git cheat sheet
 
