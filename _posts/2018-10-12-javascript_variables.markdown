@@ -6,7 +6,7 @@ permalink:  javascript_variables
 ---
 
 
-<p>In Javascript, variable declaration(creating a variable) and variable assignment(giving a variable a value) are seperated, and declarations will always return undefined whether it comes with or without assignment</p>
+<p>In Javascript, variable declaration(creating a variable) and variable assignment(giving a variable a value) are seperated, and declarations will always return undefined whether it comes with or without assignment.</p>
 <code>var x; //undefined <br>
 var x = "a value"//undefined;</code>. 
 <p>Only after referencing a variable that has been assigned a value, or assigning it a value, will it return the value within the variable</p>
