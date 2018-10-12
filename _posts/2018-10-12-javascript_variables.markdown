@@ -6,7 +6,11 @@ permalink:  javascript_variables
 ---
 
 
-<p>In Javascript, variable declaration(creating a variable) and variable assignment(giving a variable a value) are seperated, and declarations will always return undefined whether it comes with or without assignment <code>var x; //undefined</code><code>var x = "a value"//undefined;</code>. Only after referencing a variable that has been assigned a value, or assigning it a value, will it return the value within the variable<code><pre>var x = "hey"; //undefined 
+<p>In Javascript, variable declaration(creating a variable) and variable assignment(giving a variable a value) are seperated, and declarations will always return undefined whether it comes with or without assignment</p>
+<code><pre>var x; //undefined 
+var x = "a value"//undefined;</pre></code>. 
+<p>Only after referencing a variable that has been assigned a value, or assigning it a value, will it return the value within the variable</p>
+<code><pre>var x = "hey"; //undefined 
     x; //"hey"</pre></code>. With 'var' and 'let', the declaration can be made without assignment. With 'const', and declaring without a keyword, the declaration must come with assignment. 
     </p>
     <p><code>x = 'hello';</code> is automatically a global declaration, must be declared with a value, and should be avoided.</p>
