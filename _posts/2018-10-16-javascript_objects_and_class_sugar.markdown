@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Javascript Objects and Class Sugar"
-date:       2018-10-17 03:10:40 +0000
+date:       2018-10-16 23:10:41 -0400
 permalink:  javascript_objects_and_class_sugar
 ---
 
