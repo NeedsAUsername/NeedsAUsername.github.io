@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Javascript Coercion"
-date:       2018-10-22 21:30:43 +0000
+date:       2018-10-22 17:30:43 -0400
 permalink:  javascript_coercion
 ---
 
