@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Learning React"
-date:       2018-10-29 03:25:07 +0000
+title:      "React:  A modern approach to frontend development"
+date:       2018-10-28 23:25:08 -0400
 permalink:  learning_react
 ---
 
