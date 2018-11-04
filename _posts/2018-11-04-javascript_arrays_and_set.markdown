@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Javascript Arrays and Set"
-date:       2018-11-04 17:39:19 +0000
+title:      "Javascript Unique Elements and Range"
+date:       2018-11-04 12:39:20 -0500
 permalink:  javascript_arrays_and_set
 ---
 
