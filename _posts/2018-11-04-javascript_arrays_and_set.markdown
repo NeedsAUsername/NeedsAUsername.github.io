@@ -6,9 +6,7 @@ permalink:  javascript_arrays_and_set
 ---
 
 
-In Ruby, getting unique elements from an array is as easy as [Array].uniq
-
-`[1, 2, 2].uniq; // [1, 2]`
+In Ruby, getting unique elements from an array is as easy as [Array].uniq 
 
 There's no uniq method in Javascript. However, Javascript does have a built-in object called Set, which stores unique values. To use it to obtain unique elements from an array, simply instantiate it, with the array as the argument. 
 
