@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "CORS Trouble and how to get around it!"
-date:       2018-11-08 03:55:19 +0000
+date:       2018-11-07 22:55:19 -0500
 permalink:  cors_trouble_and_how_to_get_around_it
 ---
 
@@ -13,4 +13,10 @@ permalink:  cors_trouble_and_how_to_get_around_it
 An hour of fiddling with the fetch headers, and searching stack overflow, I finally arrived at an answer. Apparently, the authorization header that the Yelp API required triggered something called a CORS pre-flight process, where the browser sends an OPTIONS request to the server to see if the fetch request is safe. The server is supposed to send back an Access-Control-Allow-Origin header. If that header is not sent back, the browser will not start the fetch request, and this was what was happening when I tried to fetch from the Yelp API. 
 </p> 
 
-The solution was to use a CORS proxy. Luckily there's a really useful one [here](https://cors-anywhere.herokuapp.com/). All I needed to do was to prepend the yelp URL with the proxy url in the fetch request. The proxy simply added a Access-Control-Allow-Origin header to the server's response, and all was well! Whew.  
+<p>The solution was to use a CORS proxy. Luckily there's a really useful one [here](https://cors-anywhere.herokuapp.com/). All I needed to do was to prepend the yelp URL with the proxy url in the fetch request. The proxy simply added a Access-Control-Allow-Origin header to the server's response, and all was well! Whew. 
+</p> 
+
+<p> 
+You can read more about how CORS works [here](http://).
+</p>
+
