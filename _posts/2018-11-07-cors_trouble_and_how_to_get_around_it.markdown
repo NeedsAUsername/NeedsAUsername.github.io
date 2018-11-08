@@ -6,7 +6,7 @@ permalink:  cors_trouble_and_how_to_get_around_it
 ---
 
 
-<p>Just finished an intense debugging session, and decided to write a blog post about it! I was trying to fetch data from the yelp api, when I received an error I had never encountered before: 'Fetch API cannot load . Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1:3000' is therefore not allowed access. The response had HTTP status code 501. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.' 
+<p>Just finished an intense debugging session, and decided to write a blog post about it! I was trying to fetch data from the yelp api, when I received an error I had never encountered before: 'Fetch API cannot load . Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin is therefore not allowed access. The response had HTTP status code 501. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.' 
 </p>
 
 <p>
@@ -17,6 +17,6 @@ An hour of fiddling with the fetch headers, and searching stack overflow, I fina
 </p> 
 
 <p> 
-You can read more about how CORS works [here](http://).
+You can read more about how CORS works [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Preflighted_requests)
 </p>
 
