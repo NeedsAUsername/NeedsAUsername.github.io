@@ -16,6 +16,10 @@ An hour of fiddling with the fetch headers, and searching stack overflow, I fina
 <p>The solution was to use a CORS proxy. Luckily there's a really useful one [here](https://cors-anywhere.herokuapp.com/). All I needed to do was to prepend the yelp url with the proxy url in the fetch request. The proxy simply added a Access-Control-Allow-Origin header to the server's response, and all was well! Whew. 
 </p> 
 
+<p>
+If you're writing your own Rails API backend like I am, a useful gem to include in your app is rails-cors. This gem will allow your app to accept requests from any source, and you'll avoid CORS trouble related to your backend! 
+</p>
+
 <p> 
 You can read more about how CORS works [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Preflighted_requests)
 </p>
