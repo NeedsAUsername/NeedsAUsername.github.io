@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React/Rails Token Auth Flow"
-date:       2018-11-15 18:16:54 +0000
+date:       2018-11-15 13:16:55 -0500
 permalink:  react_rails_token_auth_flow
 ---
 
