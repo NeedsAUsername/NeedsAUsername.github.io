@@ -1,15 +1,14 @@
 # Site settings
-title: Flatiron Blog Journal
+author: Kevin Chi
+title: A Coding Journey
 header-img: img/home-bg.png
 email: kevinchi118@gmail.com
-copyright_name: NeedsAUsername
+copyright_name: Kevin Chi
 description: > # this means to ignore newlines until "baseurl:"
-  a coding journey
+  Rails/JS/React
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  NeedsAUsername
-learn_profile: NeedsAUsername
-email_username: kevinchi118@gmail.com
 
 # Build settings
 markdown: kramdown
