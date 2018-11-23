@@ -49,7 +49,7 @@ say_word(word =  'hello') // hello
 say_word(def word 'hello' end) // syntax error
 ```
 
-<p>In Javascript, however, functions are treated as first-class citizens, which is just a fancy way of saying that they are treated just like other plain variable. This enables functions to be declared and passed as arguments (We're going to be using an immediately invoked function so its value is passed). 
+<p>In Javascript, however, functions are treated as first-class citizens, which is just a fancy way of saying that they are treated just like other plain variable. This enables functions to be declared and passed as arguments (We're going to be using an immediately invoked function so its value is passed instead of the function itself). 
 </p>
 ```
 function sayWord(word) {
