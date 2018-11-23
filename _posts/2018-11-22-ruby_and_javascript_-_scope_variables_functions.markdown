@@ -1,14 +1,15 @@
 ---
 layout: post
 title:      "Ruby and Javascript - Scope, Variables, Functions"
-date:       2018-11-23 00:52:40 +0000
+date:       2018-11-22 19:52:41 -0500
 permalink:  ruby_and_javascript_-_scope_variables_functions
 ---
 
 
-There's quite a few differences in how scope, variables, and functions are treated in Ruby versus in Javascript. 
+<p>There's quite a few differences in how scope, variables, and functions are treated in Ruby versus in Javascript. 
 
 To start off, Javascript uses lexical scoping, meaning that inner functions/closures have access to outter functions further up its scope chain. 
+</p>
 
 ```
 function outter() 
@@ -22,7 +23,46 @@ function outter()
 outter() // hello
 ```
 
+<p>
+Ruby methods, on the other hand, are closed off from all information outside of it. Inside Ruby methods, the only variables in scope are the ones declared within the function, and those passed through in arguments.  
+</p> 
 
-Ruby methods, on the other hand, are closed off from information outside of the function. The only variables it has access to are the ones declared within the function, and those passed through in arguments.  
+```
+outterVariable = 'hello' 
+
+def any_method 
+  puts outterVariable
+end 
+
+any_method // undefined local variable or method `outterVariable' 
+```
+
+In Ruby, variables can be created in arguments, but methods can not. Not to mention it just looks really awkward with Ruby's def/end syntax.
+```
+def say_word(word)  
+  puts word 
+end 
+
+say_word(word =  'hello') // hello 
+
+say_word(def word 'hello' end) // syntax error
+```
+
+In Javascript, however, functions are treated as first-class citizens, which is just a fancy way of saying that they are treated just like other plain variable. This enables functions to be declared and passed as arguments (We're going to be using an immediately invoked function so its value is passed). 
+
+```
+function sayWord(word) {
+  console.log(word)
+} 
+
+sayWord('hello') // hello
+
+sayWord( (function(){return 'hello'})() ) // hello
+
+```
+
+
+
+
 
 
