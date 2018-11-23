@@ -56,7 +56,7 @@ function sayWord(word) {
   console.log(word)
 } 
 
-sayWord('hello') // hello
+sayWord( word = 'hello') // hello
 
 sayWord( (function(){return 'hello'})() ) // hello
 
