@@ -53,12 +53,14 @@ exampleTwo.__proto__ === exampleTwo.proto__ // true
 The two __proto__ objects are equal, meaning they point to the *same object in memory*: the Example function's prototype. 
 
 In fact, the function itself doesn't matter because it's not a class; only the prototype object matters. Let's prove that now. 
+</p>
 
-Example = 'Gone!' 
+```
+Example = 'Function Gone!' 
 Example.prototype // undefined  
 
 exampleOne.__proto__ // {name: 'An example', constructor: ƒ}
-</p>
+```
 
 <p> 
 We've altered the function, but the prototype object still exists in memory, so our objects still have a reference to it. 
