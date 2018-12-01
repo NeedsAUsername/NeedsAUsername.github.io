@@ -6,7 +6,7 @@ permalink:  javascript_prototypal_inheritance
 ---
 
 
-<p>All Javascript functions will have a prototype property. Let's take a look. 
+<p>All Javascript functions have a prototype object that allows for prototypal inheritance (objects inheriting directly from other objects). Let's take a look. 
 </p>
 
 ```
