@@ -1,12 +1,12 @@
 ---
 layout: post
-title:      "Javascript Prototypal Inheritance"
-date:       2018-12-01 03:53:59 +0000
+title:      "Javascript Prototypes"
+date:       2018-11-30 22:54:00 -0500
 permalink:  javascript_prototypal_inheritance
 ---
 
 
-<p>Javascript has prototypal inheritance, instead of the classical inheritance found in most other languages. Classical inheritance lays out a blueprint for new instances to adopt, relying on commonalities between the instances. For example, creating dog and cat instances using an animal class. In Javascript, there are no classes. Rather, objects can simply inherit properties of other objects. But, you might be asking yourself, aren't objects created from functions? Yes, objects can be created from any function (the es6 class syntax is just sugar for constructor functions), but their properties are not inherited from the function itself, but from the prototype object that all functions have. Let's take a look. 
+<p>All Javascript functions will have a prototype property. Let's take a look. 
 </p>
 
 ```
@@ -23,16 +23,16 @@ Conversely, all objects have a __proto__ property, and *it will point to the pro
 
 ```
 let exampleOne = new Example 
-
+exampleOne // {}
 exampleOne.__proto__ // {name: 'An example', constructor: ƒ}
 ```
 
 <p>
-This is an important revelation! Javascript objects *do not directly inherit properties from constructor functions. They merely have access to the prototype object of their constructor function.* This is why we can create an object, add a new property to the function's prototype, and the object will have access to it; of course, this would make sense now that we know the object's __proto__ property points to that prototype object, but it would seem like magic otherwise because this functionality cannot occur in classical inheritance. 
+This is an important revelation! exampleOne itself is an **empty object**, but its __proto__ is able to point to the prototype object! Using prototype, Javascript objects *do not directly inherit properties from constructor functions. They merely have access to the prototype object of their constructor function.* This is why we can create an object, add a new property to the function's prototype, and the object will have access to it; of course, this would make sense now that we know the object's __proto__ property points to that prototype object, but it would seem like magic otherwise because this functionality cannot occur in classical inheritance. 
 </p> 
 
 <p>
-To further prove that objects don't directly obtain their own properties, and that all objects created from constructor function merely have access to the prototype of the function, we can create another object from our example function and compare their __proto__ properties. 
+To further prove out point, we can create another object from our example function and compare their __proto__ properties. 
 </p>
 
 ```
@@ -56,8 +56,9 @@ exampleOne.__proto__ // {name: 'An example', constructor: ƒ}
 
 <p> 
 We've altered the function, but the prototype object still exists in memory, so our objects still have a reference to it. 
-This is what we mean by objects inheriting from other objects. Hopefully, prototypal inheritance in Javascript is a little clearer now! 
 </p>
+
+
 
 
 
