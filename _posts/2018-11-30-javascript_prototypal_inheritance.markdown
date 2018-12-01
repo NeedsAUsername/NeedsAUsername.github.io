@@ -63,7 +63,7 @@ exampleOne.__proto__ // {name: 'An example', constructor: ƒ}
 ```
 
 <p> 
-We've altered the function, but the prototype object still exists in memory, so our objects still have a reference to it. 
+We've altered the function, but the prototype object still exists in memory, so our objects still have a reference to it. As we can see, prototypes is a powerful tool for property inheritance. With just one prototype object housing our properties, there is no need for our instances to have their own duplicate set of the same properties (unless of course, we want to make adjustments to the functionality of our object, in which case we can just give the object a new property to override the one in the prototype object!). 
 </p>
 
 
