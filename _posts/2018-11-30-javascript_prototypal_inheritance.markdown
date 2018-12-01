@@ -15,7 +15,8 @@ function Example(){ return 2}
 Example.prototype // {constructor: ƒ}   
 
 Example.protoype.name = 'An example' 
-Example.prototype // {name: 'An example', constructor: ƒ}   
+Example.prototype // {name: 'An example', constructor: ƒ}  
+Example.name // 'An example'
 ```
 <p>
 Conversely, all objects have a __proto__ property, and *it will point to the prototype of their constructor function*  
@@ -24,11 +25,16 @@ Conversely, all objects have a __proto__ property, and *it will point to the pro
 ```
 let exampleOne = new Example 
 exampleOne // {}
-exampleOne.__proto__ // {name: 'An example', constructor: ƒ}
+exampleOne.__proto__ // {name: 'An example', constructor: ƒ} 
+exampleOne.name // 'An example'
 ```
 
 <p>
-This is an important revelation! exampleOne itself is an **empty object**, but its __proto__ is able to point to the prototype object! Using prototype, Javascript objects *do not directly inherit properties from constructor functions. They merely have access to the prototype object of their constructor function.* This is why we can create an object, add a new property to the function's prototype, and the object will have access to it; of course, this would make sense now that we know the object's __proto__ property points to that prototype object, but it would seem like magic otherwise because this functionality cannot occur in classical inheritance. 
+This is an important revelation! exampleOne itself is an **empty object**, but its __proto__ is able to point to the prototype object! When exampleOne.name is called, Javascript first checks to see if exampleOne has a property called name. It does not, so Javascript will look at its __proto__ object for the name property, which it finds! 
+<p>
+Using prototype, Javascript objects *do not directly inherit properties from constructor functions. They merely have access to the prototype object of their constructor function.* 
+</p>
+This is why we can create an object, add a new property to the function's prototype, and the object will have access to it; of course, this would make sense now that we know the object's __proto__ property points to that prototype object, but it would seem like magic otherwise because this functionality cannot occur in classical inheritance. 
 </p> 
 
 <p>
