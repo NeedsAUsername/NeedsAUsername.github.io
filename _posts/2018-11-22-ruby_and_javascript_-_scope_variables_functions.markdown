@@ -8,19 +8,19 @@ permalink:  ruby_and_javascript_-_scope_variables_functions
 
 <p>There's quite a few differences in how scope, variables, and functions are treated in Ruby versus in Javascript. 
 
-To start off, Javascript uses lexical scoping, meaning that inner functions/closures have access to outter functions further up its scope chain. 
+To start off, Javascript uses lexical scoping, meaning that inner functions/closures have access to outer functions further up its scope chain. 
 </p>
 
 ```
-function outter() 
-  let outterVar = 'hello'; 
+function outer() 
+  let outerVar = 'hello'; 
 	function innerVar() {
-	  console.log(outterVar);
+	  console.log(outerVar);
 	}
 	innerVar();
 }
 
-outter() // hello
+outer() // hello
 ```
 
 <p>
@@ -28,13 +28,13 @@ Ruby methods, on the other hand, are closed off from all information outside of 
 </p> 
 
 ```
-outterVariable = 'hello' 
+outerVariable = 'hello' 
 
 def any_method 
-  puts outterVariable
+  puts outerVariable
 end 
 
-any_method // undefined local variable or method `outterVariable' 
+any_method // undefined local variable or method `outerVariable' 
 ```
 <p>
 In Ruby, variables can be created in arguments, but methods can not. Not to mention it just looks really awkward with Ruby's def/end syntax.
@@ -62,9 +62,9 @@ sayWord( (function(){return 'hello'})() ) // hello
 
 ``` 
 
+<p>
+Javascript's arguments are also optional, whereas Ruby's arguments are required and will bring up an error if you don't provide them. As we can see, these languages take different approaches to writing code, each with their own style and personality. 
 </p>
-Javascript's arguments are also optional, whereas Ruby's arguments are required and will bring up and error if you don't provide them. As we can see, these languages take different approaches to writing code, each with their own style and personality. 
-
 <p>When it comes to functions and variable scoping, Javascript is flexible ( maybe too flexible- don't get me started on its type coercion); it can create functions within arguments, and it allows all functions to access all variables above it in its scope chain. This freedom may come at a price, however, as variables can change and shift unexpectedly, as functions can easily get their hands on them. 
 </p> 
 <p> 
