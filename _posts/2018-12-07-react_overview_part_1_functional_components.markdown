@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React Overview Part 1: Functional Components"
-date:       2018-12-08 02:48:20 +0000
+date:       2018-12-07 21:48:21 -0500
 permalink:  react_overview_part_1_functional_components
 ---
 
@@ -27,10 +27,10 @@ Not too difficult, right? ReactDOM.render takes an element to display as its fir
 
 ```
 const App = () => (
-  <div>
-    <Hello /> 
-		<Bye />
-	</div>
+<div>
+ <Hello />
+ <Bye />
+</div>
 (
 const Hello = () => (
   <div>Hello</div>
@@ -50,10 +50,10 @@ Now we can render hello and bye in our app! But wait- if we wanted to render mor
 
 ```
 const App = () => (
-  <div>
-    <Say words="Hello" /> 
-		<Say words="Bye" />
-	</div>
+<div>
+ <Say words="Hello" />
+  <Say words="Bye" />
+</div>
 (
 const Say = (props) => (
   <div>{props.words}</div>
