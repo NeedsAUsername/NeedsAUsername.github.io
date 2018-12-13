@@ -70,8 +70,8 @@ But what about the weird addition and subtraction?
 let a = '1'; 
 let b = 1; 
 
-function add_same_types () {
-   if (a === b) {
+function add_same_types (a, b) {
+   if (typeof(a) === typeof(b)) {
 	    return a + b;
    }
 	 else {return 'not the same type!'}
