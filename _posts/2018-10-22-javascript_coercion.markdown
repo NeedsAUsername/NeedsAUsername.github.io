@@ -17,7 +17,7 @@ How can this return true when comparing a string to a number? This is where Java
 '2' + 2 // '22'
 ```
 
-Javascript coerces the 2 into a string, and thereby the result is '22'. In cases of addition, subtraction, and comparison, the number will be coerced into a string. However, in cases of multiplication or division the string will be coerced into a number, like so: 
+Javascript coerces the 2 into a string, and concatenates, resulting in '22'. In cases of addition and comparison where one variable is a string, the other will also be coerced into a string. However, in cases of multiplication or division the string will be coerced into a number, like so: 
 
 ```
 '2' * 2 // 4
