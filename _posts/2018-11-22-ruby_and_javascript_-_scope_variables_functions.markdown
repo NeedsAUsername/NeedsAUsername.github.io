@@ -37,16 +37,7 @@ end
 any_method // undefined local variable or method `outerVariable' 
 ```
 <p>
-In Ruby, variables can be created in arguments, but methods can not. Not to mention it just looks really awkward with Ruby's def/end syntax.
-</p>
-```
-def say_word(word)  
-  puts word 
-end 
-
-say_word(word =  'hello') // hello 
-
-say_word(def word 'hello' end) // syntax error
+In Ruby, methods aren't treated like functions in other languages; they can't be passed to other methods as arguments, returned by other methods, or assigned to a variable (thus, there is no way to reference a Ruby method). In order words, Ruby methods can only return values, and Ruby variables can only hold values. 
 ```
 
 <p>In Javascript, however, functions are treated as first-class citizens, which is just a fancy way of saying that they are treated just like other plain variable. This enables functions to be declared and passed as arguments (We're going to be using an immediately invoked function so its value is passed instead of the function itself). 
@@ -66,10 +57,10 @@ sayWord( (function(){return 'hello'})() ) // hello
 <p>
 Javascript's arguments are also optional, whereas Ruby's arguments are required and will bring up an error if you don't provide them. As we can see, these languages take different approaches to writing code, each with their own style and personality. 
 </p>
-<p>When it comes to functions and variable scoping, Javascript is flexible ( maybe too flexible- don't get me started on its type coercion); it can create functions within arguments, and it allows all functions to access all variables above it in its scope chain. This freedom may come at a price, however, as variables can change and shift unexpectedly, as functions can easily get their hands on them. 
+<p>When it comes to functions and variable scoping, Javascript is flexible; it can create functions within arguments, and it allows all functions to access all variables above it in its scope chain. This freedom may come at a price, however, as variables can change and shift unexpectedly, as functions can easily change their values. 
 </p> 
 <p> 
-On the other hand, Ruby is strict. Many people analogize Ruby methods to a living cell; self-reliant and only filtering in explicitly necessary outside resources through its cell walls. Planned, and methodical, this approach may seem limiting, but is less prone to variable mishaps, as every method is self-contained, and you're never unsure about a variable's value. 
+On the other hand, Ruby is strict. Many people analogize Ruby methods to a living cell; self-reliant and only filtering in explicitly necessary outside resources through its cell walls. Planned, and methodical, this approach may seem limiting, but is less prone to variable mishaps, as every method is self-contained, and you're never unsure about a variable's value (unless you directly change a variable's value, it will always hold the same value that you declared it with). 
 </p>
 
 
