@@ -12,7 +12,7 @@ To start off, Javascript uses lexical scoping, meaning that inner functions/clos
 </p>
 
 ```
-function outer() 
+function outer() {
   let outerVar = 'hello'; 
 	function innerVar() {
 	  console.log(outerVar);
