@@ -29,8 +29,10 @@ When we run normal synchronous code, everything is done through the call stack, 
 </p>
 
 ```
-async function fetchSomeData() {
- console.log('data fetched');
+function fetchSomeData() {
+ return setTimeOut(function() {
+  console.log('data fetched');
+ }, 0) 
 } 
 function hello() {
  console.log('Hello') 
