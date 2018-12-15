@@ -37,7 +37,7 @@ end
 any_method // undefined local variable or method `outerVariable' 
 ```
 <p>
-In Ruby, methods aren't treated like functions in other languages; they can't be passed to other methods as arguments, returned by other methods, or assigned to a variable (thus, there is no way to reference a Ruby method). In order words, Ruby methods can only return values, and Ruby variables can only hold values. 
+In Ruby, methods aren't treated like functions in other languages; they can't be passed to other methods as arguments, returned by other methods, or assigned to a variable (thus, there is no way to reference a Ruby method). In order words, Ruby methods can only return values, and Ruby variables can only hold values. (If you do need some of these features, look into Ruby Procs)
 ```
 
 <p>In Javascript, however, functions are treated as first-class citizens, which is just a fancy way of saying that they are treated just like other plain variable. This enables functions to be declared and passed as arguments (We're going to be using an immediately invoked function so its value is passed instead of the function itself). 
