@@ -6,9 +6,9 @@ permalink:  react_overview_part_1_functional_components
 ---
 
 <p>
-React is used for creating dynamic user interfaces. At the core of React are its componentsThe dynamic aspect of React comes through its use of state and props within components: every time state or props is changed, React checks to see if its virtual DOM has changed; if so, it makes the necessary rerenders! Let's step back a bit, and start from the beginning. 
+React is used for creating dynamic user interfaces. At the core of React are its components. The dynamic aspect of React comes through its use of state and props within components: every time state or props is changed, React checks to see if its virtual DOM has changed; if so, it makes the necessary rerenders! Let's step back a bit, and start from the beginning. 
 </p>
-<p>React Components come in the form of either javascript functions or classes. Functional components don't have state and is usually just used to present information given to it. They're often called stateless/presentational/dumb components; they're easier to understand than class components so let's start with creating a simple functional component. 
+<p>React Components come in the form of either javascript functions or classes. Functional components don't have state and are usually just used to present information given to it. They're often called stateless/presentational/dumb components; they're easier to understand than class components so let's start with creating a simple functional component. 
 </p>
 ```
 const Hello = () => (
