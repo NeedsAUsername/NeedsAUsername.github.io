@@ -16,7 +16,7 @@ const Hello = () => (
 )
 
 ReactDOM.render(
-  <Hello />
+  <Hello />,
   document.getElementById('root')
 )
 ```
@@ -40,7 +40,7 @@ const Bye = () => (
 )
 
 ReactDOM.render(
-  <App />
+  <App />,
   document.getElementById('root')
 )
 ```
@@ -60,7 +60,7 @@ const Say = (props) => (
 )
 
 ReactDOM.render(
-  <App />
+  <App />,
   document.getElementById('root')
 )
 ```
