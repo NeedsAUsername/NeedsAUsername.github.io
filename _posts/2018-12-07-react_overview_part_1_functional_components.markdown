@@ -54,7 +54,7 @@ const App = () => (
  <Say words="Hello" />
   <Say words="Bye" />
 </div>
-(
+)
 const Say = (props) => (
   <div>{props.words}</div>
 )
