@@ -31,7 +31,7 @@ const App = () => (
  <Hello />
  <Bye />
 </div>
-(
+)
 const Hello = () => (
   <div>Hello</div>
 )
