@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Socket.io with Express and React"
-date:       2018-12-22 16:28:33 +0000
+date:       2018-12-22 11:28:34 -0500
 permalink:  socket_io_with_express_and_react
 ---
 
@@ -25,7 +25,52 @@ io.on('connection', (socket) => {
   console.log('Connected'); 
 }
 const PORT = process.env.PORT || 5000;
-socketServer.listen(PORT, () => {console.log('Socket Server started on ' + PORT)})
+socketServer.listen(PORT, () => {console.log('Socket Server started on ' + PORT)}) 
 ```
+
+Now let's go to our React client. We're going to create a button that will change the text inside an h1 element, and use socket.io to transmit that to all of our clients. To start, we need to cd into our React client folder, and run `npm install socket.io-client`. 
+Next, let's add the following to our app.js. 
+
+``` 
+import socketIOClient from "socket.io-client";
+
+const socket = socketIOClient('http://localhost:5000');
+socket.on('change text', (text) => {
+  let title = document.querySelector('.title'); 
+	title.textContent = text;
+})
+
+class App extends Component { 
+ changeText = (text) => {
+  socket.emit('change text', text)
+ }
+ render() {
+  return (
+	 <div> 
+	  <h1 className="title">Hello</h1> 
+		<button onClick={() => this.changeText('bye')}>bye</button>
+		<button onClick={() => this.changeText('hello again')}>hello again</button>
+	 </div>
+	)
+ }
+}
+```
+
+First, we've imported our socketIOClient, and connected to our socket Express server. Then we set it to listen to a change text event, in which it will take our title element and change the text to what the function's text argument. We've created a button that will pass 'bye' into our changeText function, which will emit a change text socket event. We just need to add some code to our Express server to get this all to work. 
+
+```
+io.on('connection', (socket) => {
+  console.log('Connected');  
+	io.on('change text', (text) => {
+	 io.sockets.emit('change text', text)
+	})
+}
+```
+
+Now, when we click the bye button, we emit a 'change text' event, which our socket server is now listenting for. When the socket server notices the event, it will emit a 'change text' event to all client sockets. This means that if we have two browsers, both of them will receive the event! Try it out- open up two browsers and notice how the title element of both browsers change when we click a button on either browser. This is the basic pattern that you can expand upon to build more complex real-time apps with socket.io. 
+
+
+
+
 
 
