@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React Overview Part 2- State"
-date:       2018-12-22 02:26:52 +0000
+date:       2018-12-21 21:26:53 -0500
 permalink:  react_overview_part_2-_state
 ---
 
@@ -21,7 +21,7 @@ class Form extends React.Component {
 	return (
 	 <form>   
 	  <label htmlFor="name">Name</label>
-	  <input type="text" id="name" name="name" value={this.state.name} />
+	  <input type="text" id="name" value={this.state.name} />
 	  <input type="submit"/>
 	 </form>
 	)
@@ -29,7 +29,38 @@ class Form extends React.Component {
 }
 ```
 
-We've created a class component called Form, that renders a form with a textbox for a name. Since "for" is a reserved keyword, we used "htmlFor" instead. We are setting the component's state, which is just a Javascript object, and also setting the form's input value to the state. If we run this right now, we'll discover that we can't actually type anything into the box because it's set to the value of this.state.name, which is just an empty string. We need an event action that will take any changes we make in the form, and update our state.  
+We've created a class component called Form, that renders a form with a textbox for a name. Since "for" is a reserved keyword, we used "htmlFor" instead. We are setting the component's state, which is just a Javascript object, and also setting the form's input value to the state. If we run this right now, we'll discover that we can't actually type anything into the box because it's set to the value of this.state.name, which is just an empty string. We need an event action that will take any changes we make in the form, and update our state.   
+
+```
+import React from 'react'; 
+
+class Form extends React.Component { 
+ state = {
+  name=""
+ }
+ handleChange = (event) => {
+  event.preventDefault(); 
+	this.setState({
+	 name: event.target.value
+	})
+ } 
+ handleSubmit = (event) => {
+  event.preventDefault(); 
+	alert('hi, my name is ' + this.state.name);
+ }
+ render() {
+	return (
+	 <form onSubmit={this.handleSubmit}>   
+	  <label htmlFor="name">Name</label>
+	  <input type="text" id="name" value={this.state.name} onChange={this.handleChange} />
+	  <input type="submit"/>
+	 </form>
+	)
+ }
+}
+```
+We've created a handleChange function that will use the setState React method(we don't want to ever change state directly because React won't actually know that a change occured unless we use setState) to change the state to whatever is in the input field (through event.target.value). We can set an onChange property in our input field and give it our handleChange function to make this work. Now our state will always correspond to what is in the input field! We did a similar pattern with our handleSubmit function. Try submitting the form, and see what gets outputted! 
+
 
 
 
