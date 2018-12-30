@@ -6,7 +6,7 @@ permalink:  socket_io_with_express_and_react
 ---
 
 
-Traditionally, a client sends an http request to a client and the client sends back information to the client. Http is stateless, so requests aren't aware of any previous requests. This means that if we wanted to check if something is updated(let's say, weather info from a weather API), we would need to continuously send a request every 10 seconds or so to see if there is any updated data. There has to be a better way, right? In comes web sockets, allowing continuous real-time communication between server and client. Let's try it out with Javascript's socket.io library. 
+Traditionally, a client sends an http request to a server and the server sends back information to the client. Http is stateless, so requests aren't aware of any previous requests. This means that if we wanted to check if something is updated(let's say, weather info from a weather API), we would need to continuously send a request every 10 seconds or so to see if there is any updated data. There has to be a better way, right? In comes web sockets, allowing continuous real-time communication between server and client. Let's try it out with Javascript's socket.io library. 
 
 To add socket.io to a Node app, we add it to our package.json with `npm install socket.io`. Next, we need to pass our server to it. 
 
