@@ -28,8 +28,7 @@ const PORT = process.env.PORT || 5000;
 socketServer.listen(PORT, () => {console.log('Socket Server started on ' + PORT)}) 
 ```
 
-Now let's go to our React client. We're going to create a button that will change the text inside an h1 element, and use socket.io to transmit that to all of our clients. To start, we need to cd into our React client folder, and run `npm install socket.io-client`. 
-Next, let's add the following to our app.js. 
+Now let's go to our React client (if you haven't already, create a folder called client, cd into client and run npx create-react-app). We're going to create a button that will change the text inside an h1 element, and use socket.io to transmit that to all of our clients. To start, we need to cd into our React client folder, and run npm install socket.io-client. Next, let's add the following to our React's app.js.
 
 ``` 
 import socketIOClient from "socket.io-client";
@@ -56,7 +55,7 @@ class App extends Component {
 }
 ```
 
-First, we've imported our socketIOClient, and connected to our socket Express server. Then we set it to listen to a change text event, in which it will take our title element and change the text to what the function's text argument. We've created a button that will pass 'bye' into our changeText function, which will emit a change text socket event. We just need to add some code to our Express server to get this all to work. 
+First, we've imported our socket.io-client, and connected it to our Express socket server. Then we set our client socket to listen to a change text event, in which it will take our title element and change the text to what the function's text argument. We've created a button that will pass 'bye' into our changeText function, which will emit a change text socket event. We just need to add some code to our Express server to get this all to work. Let's head back into our Express' app.js file and add the following to our io connection code.
 
 ```
 io.on('connection', (socket) => {
